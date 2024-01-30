@@ -65,5 +65,12 @@ The container exposes the following ports:
 | 38081 | N                   | _testnet_ RPC communications                                                      |
 | 38082 | N                   | _testnet_ JSON-RPC port                                                           |
 
+## Dependencies
+| Name                                         | Version   |
+| -------------------------------------------- | --------- |
+| [Alpine Linux](https://www.alpinelinux.org/) | v3.19.1   |
+| [Monero](https://www.getmonero.org/)         | v0.18.3.1 |
+
 ## License
-This project inherits Monero's license - see the [LICENSE](LICENSE) file for details.
+The container image portion of this project is licensed under the GNU Affero General Public License v3.0 - see the [LICENSE](LICENSE) file for details.
+The Monero software binaries included with this container image inherit Monero's license - see the [MONERO LICENSE](MONERO_LICENSE) file for details.
