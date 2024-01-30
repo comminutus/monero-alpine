@@ -1,5 +1,5 @@
 # monero-alpine
-[![Monero License](https://img.shields.io/badge/license-BSD3-blue.svg)](https://opensource.org/licenses/BSD-3-Clause)
+[![AGPL License](https://img.shields.io/badge/license-AGPL-blue.svg)](https://www.gnu.org/licenses/agpl-3.0.html)
 [![CI](https://github.com/comminutus/monero-alpine/actions/workflows/ci.yaml/badge.svg)](https://github.com/comminutus/monero-alpine/actions/workflows/ci.yaml)
 [![GitHub release (latest by date)](https://img.shields.io/github/v/release/comminutus/monero-alpine)](https://github.com/comminutus/monero-alpine/releases/latest)
 
@@ -61,9 +61,9 @@ The container exposes the following ports:
 | 28080 | N                   | _stagenet_ peer-to-peer communications                                             |
 | 28081 | N                   | _stagenet_ RPC communications                                                      |
 | 28082 | N                   | _stagenet_ JSON-RPC port                                                           |
-| 38080 | N                   | _testnet_ peer-to-peer communications                                             |
-| 38081 | N                   | _testnet_ RPC communications                                                      |
-| 38082 | N                   | _testnet_ JSON-RPC port                                                           |
+| 38080 | N                   | _testnet_ peer-to-peer communications                                              |
+| 38081 | N                   | _testnet_ RPC communications                                                       |
+| 38082 | N                   | _testnet_ JSON-RPC port                                                            |
 
 ## Dependencies
 | Name                                         | Version   |
@@ -72,5 +72,8 @@ The container exposes the following ports:
 | [Monero](https://www.getmonero.org/)         | v0.18.3.1 |
 
 ## License
-The container image portion of this project is licensed under the GNU Affero General Public License v3.0 - see the [LICENSE](LICENSE) file for details.
-The Monero software binaries included with this container image inherit Monero's license - see the [MONERO LICENSE](MONERO_LICENSE) file for details.
+The container image portion of this project is licensed under the GNU Affero General Public License v3.0 - see the
+[LICENSE](LICENSE) file for details.
+
+The Monero software binaries included with this container image inherit Monero's license - see the 
+[MONERO LICENSE](MONERO_LICENSE) file for details.

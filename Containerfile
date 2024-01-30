@@ -23,6 +23,7 @@ ARG ports='18080 18081 18082 18083 28080 28081 28082 28083 38080 38081 38082 380
 # Defaults
 ARG uid=10000
 ARG build_dir=/tmp/build
+ARG license=$build_dir/monero/LICENSE
 ARG dist_dir=$build_dir/monero/build/release/bin
 ARG install_dir=/usr/local/bin
 ARG data_dir=/var/lib/monero
@@ -66,7 +67,7 @@ RUN CXXFLAGS='-DELPP_FEATURE_CRASH_LOG' make -j$(nproc)
 # Final Image
 ########################################################################################################################
 FROM base as final
-ARG data_dir dist_dir install_dir ports uid
+ARG data_dir dist_dir install_dir license ports uid
 
 WORKDIR /home/monero
 
@@ -96,6 +97,7 @@ ENV MONERO_ZMQ_PUB=
 # Install Monero binaries
 RUN mkdir -p "$install_dir" "$data_dir"
 COPY --from=build $dist_dir $install_dir
+COPY --from=build $license /usr/share/licenses/monero/
 
 # Create Monero user
 RUN addgroup -g $uid -S monero && adduser -u $uid -S -D -G monero monero
